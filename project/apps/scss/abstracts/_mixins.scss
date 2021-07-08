@@ -1,0 +1,30 @@
+// @ Media Querry Contents.. Size in rem:
+// 1rem = 16px
+
+
+// $breakpoint argument choises:
+// -phone
+// -tablet
+// -desktop
+// -big-desktop
+
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint == phone {
+        @media(max-width: 37.5rem) {@content}; //600px
+    }
+
+    @if $breakpoint == tablet {
+        @media(max-width: 60.5rem) {@content}; //968px
+    }
+
+    @if $breakpoint == desktop {
+        @media(max-width: 80rem) {@content}; //1280px
+    }
+
+    @if $breakpoint == big-desktop {
+        @media(min-width: 90rem) {@content}; //1440px ++
+    }
+
+}

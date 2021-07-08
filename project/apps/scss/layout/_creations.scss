@@ -1,0 +1,315 @@
+// Cretion styling
+.creations {
+    margin: 0 10.25rem;
+    padding-bottom: 5.937rem;
+    position: relative;
+
+    @include respond(tablet) {
+        margin: 0 auto;
+    }
+
+      
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 11.562rem;
+        padding-bottom: 5.57rem;
+
+        @include respond(desktop) {
+            display: block;
+            text-align: center;
+        }
+
+        @include respond(tablet) {
+            padding-top: 8.1875rem;
+        }
+
+
+        h1 {
+            font-size: 2.5rem;
+            font-family:'Josefin Sans', sans-serif;
+            font-weight: 300;
+            text-transform: uppercase;
+
+            @include respond(phone) {
+                font-size: 2.3rem;
+            }
+        }
+
+        .btn {
+            width: 9.812rem;
+            height: 2.5rem;
+            font-size: 0.8rem;
+            font-family:'Alata', sans-serif;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            border: 1px solid $black;
+            background-color: transparent;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $black;
+                color: $white;
+            }
+
+            @include respond(desktop) {
+                    position: absolute;
+                    bottom: 0;
+                    right: 50%;
+                    transform: translateX(80px);
+            }
+        }
+    }
+
+    // Images styling with grid
+   &__images {
+       display: grid;
+       justify-content: space-evenly;
+       grid-template-columns: repeat(4, 1fr);
+       grid-template-rows: auto;
+       gap: 1.875rem;
+       grid-template-areas: 
+       'img1 img2 img3 img4'
+       'img5 img6 img7 img8'
+       ;
+
+       @include respond(desktop) {
+           grid-template-columns: repeat(3, 1fr);
+           grid-template-rows: auto;
+           grid-template-areas: 
+           'img1 img2 img3'
+           'img4 img5 img6'
+           'img7 img7 img7'
+           'img8 img8 img8'
+           ;
+       }
+
+       @include respond (tablet) {
+           grid-template-columns: 1fr; 
+           grid-template-rows: auto;
+           grid-template-areas: 
+           'img1'
+           'img2'
+           'img3'
+           'img4'
+           'img5'
+           'img6'
+           'img7'
+           'img8'
+           ;
+       }
+       
+        .img1 {
+            grid-area: img1;
+            width: 16rem;
+            height: 28.125rem;
+            background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)), url('../images/desktop/image-deep-earth.jpg');
+
+            @include respond(tablet) {
+                
+                width: 654px;
+                height: 240px;
+                background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)), url('../images/mobile/image-deep-earth.jpg');
+                justify-self: center;
+            }
+
+            @include respond(phone) {
+                max-width: 300px;
+                justify-self: center;
+                background-position: center center;
+            }
+        }
+
+        .img2 {
+            grid-area: img2;
+            width: 16rem;
+            height: 28.125rem;
+            background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)), url('../images/desktop/image-night-arcade.jpg');
+
+            @include respond(tablet) {
+               
+                width: 654px;
+                height: 240px;
+                background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)), url('../images/mobile/image-night-arcade.jpg');
+                justify-self: center;
+            }
+
+            @include respond(phone) {
+                max-width: 300px;
+                justify-self: center;
+                background-position: center center;
+            }
+        }
+
+        .img3 {
+            grid-area: img3;
+            width: 16rem;
+            height: 28.125rem;
+            background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)), url('../images/desktop/image-soccer-team.jpg');
+
+            @include respond(tablet) {
+               
+                width: 654px;
+                height: 240px;
+                background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)), url('../images/mobile/image-soccer-team.jpg');
+                justify-self: center;
+            }
+
+            @include respond(phone) {
+                max-width: 300px;
+                justify-self: center;
+                background-position: center center;
+            }
+        }
+
+        .img4 {
+            grid-area: img4;
+            width: 16rem;
+            height: 28.125rem;
+            padding-right: 2rem;
+            background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)), url('../images/desktop/image-grid.jpg');
+
+            @include respond(tablet) {
+               
+                width: 654px;
+                height: 240px;
+                background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)), url('../images/mobile/image-grid.jpg');
+                padding-right: 5rem;
+                justify-self: center;
+            }
+
+            @include respond(phone) {
+                max-width: 300px;
+                justify-self: center;
+                background-position: center center;
+            }
+        }
+
+        .img5 {
+            grid-area: img5;
+            width: 16rem;
+            height: 28.125rem;
+            background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)), url('../images/desktop/image-from-above.jpg');
+
+            @include respond(tablet) {
+               
+                width: 654px;
+                height: 240px;
+                background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)), url('../images/mobile/image-from-above.jpg');
+                justify-self: center;
+            }
+
+            @include respond(phone) {
+                max-width: 300px;
+                justify-self: center;
+                background-position: center center;
+            }
+        }
+
+        .img6 {
+            grid-area: img6;    
+            width: 16rem;
+            height: 28.125rem;
+            background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)), url('../images/desktop/image-pocket-borealis.jpg');
+
+            @include respond(tablet) {
+                
+                width: 654px;
+                height: 240px;
+                background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)), url('../images/mobile/image-pocket-borealis.jpg');
+                justify-self: center;
+            }
+
+            @include respond(phone) {
+                max-width: 300px;
+                justify-self: center;
+                background-position: center center;
+            }
+        }
+        
+        .img7 {
+            grid-area: img7;
+            width: 16rem;
+            height: 28.125rem;
+            background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)), url('../images/desktop/image-curiosity.jpg');
+
+            @include respond(desktop) {
+                justify-self: center;
+                width: 654px;
+                height: 240px;
+                background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)), url('../images/mobile/image-curiosity.jpg');
+                justify-self: center;
+            }
+
+            @include respond(phone) {
+                max-width: 300px;
+                justify-self: center;
+                background-position: center center;
+            }
+        }
+
+        .img8 {
+            grid-area: img8;
+            width: 16rem;
+            height: 28.125rem;
+            background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)), url('../images/desktop/image-fisheye.jpg');
+
+            @include respond(desktop) {
+                justify-self: center;
+                width: 654px;
+                height: 240px;
+                background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)), url('../images/mobile/image-fisheye.jpg');
+                justify-self: center;
+            }
+
+            @include respond(phone) {
+                max-width: 300px;
+                justify-self: center;
+                background-position: center center;
+            }
+        }
+
+        .img1,.img2,.img3,.img4,.img5,.img6,.img7,.img8 {
+            display: grid;
+            background-repeat: no-repeat;
+            color: $white;
+            cursor: pointer;
+
+            h1{
+                align-self: flex-end;
+                font-size: 1.8rem;
+                font-family: 'Josefin Sans', sans-serif;
+                font-weight: 300;
+                text-transform: uppercase;
+                padding-left: 2.625rem;
+                margin-bottom: 2.625rem;
+                padding-right: 3rem;
+
+                @include respond(tablet) {
+                    padding-right: 28rem;
+                }
+
+                @include respond(phone) {
+                    font-size: 1.5rem;
+                    padding-left: 4rem;
+                    padding-right: 5.5rem;
+                }
+                
+            }
+
+            // Hover effect for the images
+
+            &:hover {
+                color: $black;
+                box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.7);
+            }
+
+            @include respond(big-desktop) {
+                justify-self: center;
+            }
+        }
+   }
+   
+}

@@ -1,0 +1,15 @@
+// DEFAULT STYLING
+*, 
+*::before, 
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-height: 100vh;
+    font-family: 'Alata', 'Josefin Sans', sans-serif;
+    font-size: $basicSize; //16px
+    overflow-x: hidden;
+}
